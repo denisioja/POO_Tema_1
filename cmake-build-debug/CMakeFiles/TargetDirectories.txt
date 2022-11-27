@@ -1,3 +1,3 @@
-C:/Users/Denis/Desktop/TemaPOO/Tema1/cmake-build-debug/CMakeFiles/Tema1.dir
-C:/Users/Denis/Desktop/TemaPOO/Tema1/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/Denis/Desktop/TemaPOO/Tema1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/Denis/Desktop/Tema1_POO_2/cmake-build-debug/CMakeFiles/Tema1.dir
+C:/Users/Denis/Desktop/Tema1_POO_2/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Denis/Desktop/Tema1_POO_2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
