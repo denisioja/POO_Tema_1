@@ -104,7 +104,7 @@ std::ostream & operator <<(std::ostream &out, const Vegetatie &vegetatie){
 
 class Lac {
 private:
-    float suprafata;
+    float suprafata = 0;
     std::string tip; //natural, artificial
 public:
     Lac() = default;
