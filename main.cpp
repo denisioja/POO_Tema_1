@@ -151,8 +151,7 @@ private:
     std::string stare; // foarte buna, buna, medie, proasta
     int pret;
 public:
-
-    Banci() = default;
+    //Banci() = default;
 
     Banci(int numar_, const std::string &culoare_, const std::string &stare_, int pret_);
 
@@ -287,11 +286,10 @@ Parc::Parc(const Parc &parc) {
 void Parc::achizitie_banci(int buget) {
     int pret_fb = 0;
     unsigned long long i, fb = 0;
-    std::string best;
     std::string state = "foarte buna";
     for(i=0;i<banci.size();i++){
         if(state.compare(banci[i].get_stare())==0){
-            best = banci[i].get_culoare();
+            std::string best = banci[i].get_culoare();
             pret_fb = banci[i].get_pret();
             fb = i;
             break;
