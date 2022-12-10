@@ -72,7 +72,7 @@ public:
 
 //    std::vector<Planta> Vegetatie::cauta_plante(int an); //_start, int an_sfarsit);
     void cauta_plante(int an){
-        int i;
+        unsigned long long i;
         std::cout << "Pana in anul " << an << " au fost plantate:\n";
         for(i=0;i<plante.size();i++){
             if(plante[i].get_an()<=an){
@@ -99,6 +99,7 @@ std::ostream & operator <<(std::ostream &out, Vegetatie &vegetatie){
     for(auto& planta : vegetatie.plante){
         out << planta;
     }
+    return out;
 }
 
 class Lac {
@@ -284,7 +285,8 @@ Parc::Parc(const Parc &parc) {
 }
 
 void Parc::achizitie_banci(int buget) {
-    int i, pret_fb, fb;
+    int pret_fb = 0;
+    unsigned long long i, fb;
     std::string best;
     std::string state = "foarte buna";
     for(i=0;i<banci.size();i++){
@@ -296,7 +298,7 @@ void Parc::achizitie_banci(int buget) {
         }
     }
     i=1;
-    int j;
+    unsigned long long j;
     int nr_add = 0;
     while(buget>pret_fb && i < 4){
         switch (i) {
@@ -378,7 +380,7 @@ std::ostream & operator <<(std::ostream &out, Parc &parc) {
                 break;
             case 3:
                 out << "Bancile:\n";
-                for (int i = 0; i < parc.banci.size(); i++)
+                for (unsigned long long i = 0; i < parc.banci.size(); i++)
                     out << parc.banci[i];
                 break;
         }
