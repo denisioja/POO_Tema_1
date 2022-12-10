@@ -166,9 +166,9 @@ public:
         return *this;
     }
 
-    void afisbnc(){
-        std::cout << culoare << " " << numar << " " << stare << " " << pret <<"\n";
-    }
+//    void afisbnc(){
+//        std::cout << culoare << " " << numar << " " << stare << " " << pret <<"\n";
+//    }
 
 //    static Banci* sumaB(const std::vector<Banci> &banci) {
 //        int suma=0;
@@ -433,7 +433,7 @@ int main(){
     copaci.cauta_plante(an);
     std::cout << "\n";
 
-    parc.achizitie_banci(20000);
+    parc.achizitie_banci(6000);
     std::cout << parc;
 
 //    std::cout << "\n";
