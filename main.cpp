@@ -202,7 +202,7 @@ public:
         numar = numar - nr;
     }
 
-    void set_Nr(int numar_) {numar = numar_;}
+    //void set_Nr(int numar_) {numar = numar_;}
 
     ~Banci() = default;
 
