@@ -317,6 +317,8 @@ void Parc::achizitie_banci(int buget) {
                     nr_add = nr_add + banci[j].get_numar();
                     //std::cout << banci[fb].get_numar() << " nr banci fb\n";
                     buget = buget - banci[j].get_numar() * pret_fb;
+                    if(j<fb)
+                        fb--;
                     banci.erase(banci.begin()+j);
                     break;
                 }
@@ -429,7 +431,7 @@ int main(){
     copaci.cauta_plante(an);
     std::cout << "\n";
 
-    parc.achizitie_banci(2000);
+    parc.achizitie_banci(20000);
     std::cout << parc;
 
 //    std::cout << "\n";
