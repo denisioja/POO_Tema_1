@@ -14,7 +14,7 @@ public:
 
     Planta(const Planta &planta);
 
-    friend std::ostream & operator <<(std::ostream &out, Planta &planta);
+    friend std::ostream & operator <<(std::ostream &out, const Planta &planta);
 
     int get_an() const {
         return an_plantare;
@@ -42,7 +42,7 @@ Planta::Planta(const Planta &planta) {
     this->an_plantare = planta.an_plantare;
 }
 
-std::ostream & operator <<(std::ostream &out, Planta &planta){
+std::ostream & operator <<(std::ostream &out, const Planta &planta){
     out << "Specie planta: " << planta.specie << ", plantata in anul: " << planta.an_plantare << "\n";
     return out;
 }
@@ -64,7 +64,7 @@ public:
         return *this;
     }
 
-    friend std::ostream & operator <<(std::ostream &out, Vegetatie &vegetatie);
+    friend std::ostream & operator <<(std::ostream &out, const Vegetatie &vegetatie);
 
     void adugare_planta(Planta planta){
         plante.emplace_back(planta);
@@ -94,7 +94,7 @@ Vegetatie::Vegetatie(const Vegetatie &vegetatie){
     this->tip = vegetatie.tip;
 }
 
-std::ostream & operator <<(std::ostream &out, Vegetatie &vegetatie){
+std::ostream & operator <<(std::ostream &out, const Vegetatie &vegetatie){
     out << "Tip: " << vegetatie.tip << "\n";
     for(auto& planta : vegetatie.plante){
         out << planta;
@@ -126,7 +126,7 @@ public:
 
     ~Lac() = default;
 
-    friend std::ostream & operator <<(std::ostream &out, Lac &lac);
+    friend std::ostream & operator <<(std::ostream &out, const Lac &lac);
 };
 
 Lac::Lac(float suprafata_, const std::string &tip_) {
@@ -139,7 +139,7 @@ Lac::Lac(const Lac &lac) {
     this->tip = lac.tip;
 }
 
-std::ostream & operator <<(std::ostream &out, Lac &lac) {
+std::ostream & operator <<(std::ostream &out, const Lac &lac) {
     out << "Tip lac: " << lac.tip << ", avand suprafata de: " << lac.suprafata << " m patrati\n";
     return out;
 }
@@ -206,7 +206,7 @@ public:
 
     ~Banci() = default;
 
-    friend std::ostream & operator <<(std::ostream &out, Banci &banci);
+    friend std::ostream & operator <<(std::ostream &out, const Banci &banci);
 };
 
 Banci::Banci(int numar_, const std::string &culoare_, const std::string &stare_, int pret_) {
@@ -223,7 +223,7 @@ Banci::Banci(const Banci &banci) {
     this->pret = banci.pret;
 }
 
-std::ostream & operator <<(std::ostream &out, Banci &banci) {
+std::ostream & operator <<(std::ostream &out, const Banci &banci) {
     out << "Culoare banci: " << banci.culoare << ", numarul de bucati: " << banci.numar << ", fiind in starea: " << banci.stare << ", si avand pretul de: " << banci.pret << " lei\n";
     return out;
 }
@@ -260,7 +260,7 @@ public:
 
     ~Parc() = default;
 
-    friend std::ostream & operator <<(std::ostream &out, Parc &parc);
+    friend std::ostream & operator <<(std::ostream &out, const Parc &parc);
 
 };
 
@@ -345,7 +345,7 @@ void Parc::achizitie_banci(int buget) {
     //banci[fb].set_Nr(nr_add+banci[fb].get_numar());
 }
 
-std::ostream & operator <<(std::ostream &out, Parc &parc) {
+std::ostream & operator <<(std::ostream &out, const Parc &parc) {
     out << "Date parc: \n";
     out << "Numele parcului: " << parc.nume << ", avand suprafata de: " << parc.suprafata << " m patrati\n";
     std::string input;
