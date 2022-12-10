@@ -289,7 +289,7 @@ void Parc::achizitie_banci(int buget) {
     std::string state = "foarte buna";
     for(i=0;i<banci.size();i++){
         if(state.compare(banci[i].get_stare())==0){
-            std::string best = banci[i].get_culoare();
+           // std::string best = banci[i].get_culoare();
             pret_fb = banci[i].get_pret();
             fb = i;
             break;
