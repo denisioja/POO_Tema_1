@@ -8,7 +8,7 @@ private:
     std::string specie;
     int an_plantare;
 public:
-    Planta() = default;
+    //Planta() = default;
 
     Planta(const std::string &specie_, const int an_plantare_);
 
@@ -107,10 +107,9 @@ private:
     float suprafata;
     std::string tip; //natural, artificial
 public:
-
     Lac() = default;
 
-    Lac(float suprafata_, const std::string &tip_);
+    Lac(const float suprafata_, const std::string &tip_);
 
     Lac(const Lac &lac);
 
@@ -129,7 +128,7 @@ public:
     friend std::ostream & operator <<(std::ostream &out, const Lac &lac);
 };
 
-Lac::Lac(float suprafata_, const std::string &tip_) {
+Lac::Lac(const float suprafata_, const std::string &tip_) {
     this->suprafata = suprafata_;
     this->tip = tip_;
 }
@@ -393,12 +392,11 @@ std::ostream & operator <<(std::ostream &out, const Parc &parc) {
 }
 
 int main(){
-    Planta planta1, planta2, planta3, planta4, planta5;
-    planta1 = {"Tei", 1950};
-    planta2 = {"Trandafir", 2005};
-    planta3 = {"Stejar", 1989};
-    planta4 = {"Salcam", 1999};
-    planta5 = {"Tuia", 2009};
+    Planta planta1 = Planta("Tei", 1950);
+    Planta planta2 = {"Trandafir", 2005};
+    Planta planta3 = {"Stejar", 1989};
+    Planta planta4 = {"Salcam", 1999};
+    Planta planta5 = {"Tuia", 2009};
 
     Vegetatie copaci({planta1}, "Copaci");
     copaci.adugare_planta(planta3);
