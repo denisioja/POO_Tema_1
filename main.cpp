@@ -181,9 +181,9 @@ public:
         return stare;
     }
 
-    std::string get_culoare() const {
-        return culoare;
-    }
+//    std::string get_culoare() const {
+//        return culoare;
+//    }
 
     int get_pret() const {
         return pret;
