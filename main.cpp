@@ -96,7 +96,7 @@ Vegetatie::Vegetatie(const Vegetatie &vegetatie){
 
 std::ostream & operator <<(std::ostream &out, const Vegetatie &vegetatie){
     out << "Tip: " << vegetatie.tip << "\n";
-    for(auto& planta : vegetatie.plante){
+    for(const auto& planta : vegetatie.plante){
         out << planta;
     }
     return out;
@@ -236,7 +236,7 @@ private:
     std::vector<Banci> banci;
     Lac lac;
 public:
-    Parc(const std::string &nume_, float suprafata_, const Vegetatie vegetatie_, const std::vector<Banci> &banci_, const Lac &lac_);
+    Parc(const std::string &nume_, float suprafata_, const Vegetatie &vegetatie_, const std::vector<Banci> &banci_, const Lac &lac_);
 
     Parc(const Parc &parc);
 
@@ -268,7 +268,7 @@ void get_input(std::string &input) {
     std::cin >> input;
 }
 
-Parc::Parc(const std::string &nume_, float suprafata_, const Vegetatie vegetatie_, const std::vector<Banci> &banci_, const Lac &lac_) {
+Parc::Parc(const std::string &nume_, float suprafata_, const Vegetatie &vegetatie_, const std::vector<Banci> &banci_, const Lac &lac_) {
     this->nume = nume_;
     this->suprafata = suprafata_;
     this->vegetatie = vegetatie_;
