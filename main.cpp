@@ -10,7 +10,7 @@ private:
 public:
     Planta() = default;
 
-    Planta(const std::string &specie_, int an_plantare_);
+    Planta(const std::string &specie_, const int an_plantare_);
 
     Planta(const Planta &planta);
 
@@ -32,7 +32,7 @@ public:
 //    };
 };
 
-Planta::Planta(const std::string &specie_, int an_plantare_) {
+Planta::Planta(const std::string &specie_, const int an_plantare_) {
     this->specie = specie_;
     this->an_plantare = an_plantare_;
 }
