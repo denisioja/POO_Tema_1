@@ -286,7 +286,7 @@ Parc::Parc(const Parc &parc) {
 
 void Parc::achizitie_banci(int buget) {
     int pret_fb = 0;
-    unsigned long long i, fb;
+    unsigned long long i, fb = 0;
     std::string best;
     std::string state = "foarte buna";
     for(i=0;i<banci.size();i++){
@@ -350,7 +350,7 @@ std::ostream & operator <<(std::ostream &out, Parc &parc) {
     out << "Numele parcului: " << parc.nume << ", avand suprafata de: " << parc.suprafata << " m patrati\n";
     std::string input;
     int cont = 1;
-    int info;
+    int info = 0;
     std::string veg = "Vegetatie";
     std::string lac = "Lac";
     std::string bnc = "Banci";
